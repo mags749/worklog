@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Work Log v1.0</title>
+    <script>
+        const ipcRenderer = require('electron').ipcRenderer;
+        const remote = require('electron').remote;
+        
+        function closeWin() {
+            remote.getCurrentWindow().close()
+        }
+    </script>
+</head>
+
+<body>
+    <div class="header center-lbl">
+        <div class="header-lbl">
+            worklog
+        </div>
+        <div class="right-col">
+            <button class="wl-btn" data-toggle="modal" data-target="#myModal">
+                <i class="fa fa-info-circle" aria-hidden="true"></i>
+            </button>
+            <button class="wl-btn" onclick="closeWin()">
+                <i class="fa fa-times" aria-hidden="true"></i>
+            </button>
+        </div>
+    </div>
+    <div id="container" class="container"></div>
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body modal-info">
+                    <p>Created with</p>
+                    <p style="font-size: x-large">React + Electron</p>
+                    <p>and</p>
+                    <p class="wl-heart">
+                        <i class="fa fa-heart" aria-hidden="true"></i>
+                    </p>
+                    <p>by</p>
+                    <p style="font-size: x-large">
+                        <i class="fa fa-github" aria-hidden="true"></i> &nbsp;mags749&nbsp; 
+                        (<a href="https://github.com/mags749/worklog">https://github.com/mags749/worklog</a>)
+                    </p>
+                    <p style="font-size: small">(version 1.0.0)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
