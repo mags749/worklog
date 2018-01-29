@@ -9,6 +9,19 @@ Worklog is a offline desktop application which helps you to create a worklog and
 * [NeDB](https://github.com/louischatriot/nedb) - JS DB
 * [Electron](https://electronjs.org) - Cross platform app building API
 
+## Running the application locally
+
+Checkout the code from github [repo](https://github.com/mags749/worklog.git).
+
+Run following code in your worklog code directory
+
+```
+npm install
+```
+```
+npm run burst
+```
+
 ## Authors
 
 * **Yogiraj Pujari** - *Initial work* - [mags749](https://github.com/mags749)
