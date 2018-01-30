@@ -121,25 +121,25 @@ class TaskItem extends React.Component {
                         <div className="col-sm-3">
                             <button className="wl-btn" onClick={this.setFlag.bind(this, 'NN')}>
                                 <i className="fa fa-circle" aria-hidden="true"></i>
-                                &nbsp;None
+                                {' '}None
                             </button>
                         </div>
                         <div className="col-sm-3">
                             <button className="wl-btn" onClick={this.setFlag.bind(this, 'LP')}>
-                                <i className="fa fa-flag-o" aria-hidden="true"></i>
-                                &nbsp;Low
+                                <i className="fa fa-exclamation fa-rotate-180" aria-hidden="true"></i>
+                                {' '}Low
                             </button>
                         </div>
                         <div className="col-sm-3">
                             <button className="wl-btn" onClick={this.setFlag.bind(this, 'MP')}>
-                                <i className="fa fa-flag-checkered" aria-hidden="true"></i>
-                                &nbsp;Medium
+                                <i className="fa fa-exclamation-triangle fa-rotate-180" aria-hidden="true"></i>
+                                {' '}Medium
                             </button>
                         </div>
                         <div className="col-sm-3">
                             <button className="wl-btn" onClick={this.setFlag.bind(this, 'HP')}>
-                                <i className="fa fa-flag" aria-hidden="true"></i>
-                                &nbsp;High
+                                <i className="fa fa-exclamation" aria-hidden="true"></i>
+                                {' '}High
                             </button>
                         </div>
                     </div>
@@ -161,11 +161,11 @@ class TaskItem extends React.Component {
         }
 
         if (this.props.item.priority == 'LP') {
-            flagIcon = <i className="fa fa-flag-o" aria-hidden="true"></i>
+            flagIcon = <i className="fa fa-exclamation fa-rotate-180" aria-hidden="true"></i>
         } else if (this.props.item.priority == 'MP') {
-            flagIcon = <i className="fa fa-flag-checkered" aria-hidden="true"></i>
+            flagIcon = <i className="fa fa-exclamation-triangle fa-rotate-180" aria-hidden="true"></i>
         } else if (this.props.item.priority == 'HP') {
-            flagIcon = <i className="fa fa-flag" aria-hidden="true"></i>
+            flagIcon = <i className="fa fa-exclamation" aria-hidden="true"></i>
         } else {
             flagIcon = <i className="fa fa-circle" aria-hidden="true"></i>
         }

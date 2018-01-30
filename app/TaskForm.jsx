@@ -32,7 +32,7 @@ class TaskForm extends React.Component {
     return (
       <form onSubmit={this.onFormSubmit}>
         <div className="input-group">
-          <input type="text" className="form-control" placeholder="Work...." onChange={this.onTitleChanged} value={this.state.title} />
+          <input type="text" className="form-control" placeholder="Task...." onChange={this.onTitleChanged} value={this.state.title} />
           <span className="input-group-btn">
             <button className="btn btn-info" type="submit">Add!</button>
           </span>

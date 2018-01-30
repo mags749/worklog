@@ -70,7 +70,7 @@ class WorkLog extends React.Component {
         let backButton = ''
 
         if (this.state.tasks.length > 0) {
-            backButton = <button className="wl-btn wl-btn-xl" onClick={this.navigateToHome.bind(this)} >
+            backButton = <button className="wl-btn wl-btn-xl" onClick={this.navigateToHome.bind(this)} style={{ width: '35px'}}>
                 <i className="fa fa-arrow-left" aria-hidden="true"></i>
             </button>
         }
