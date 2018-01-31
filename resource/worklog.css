@@ -34,6 +34,7 @@ h1, h2, h3, h4, h5, h6 {
     color: #ECF0F1;
     height: 25px;
     font-weight: bold;    
+    font-size: initial;
     -webkit-box-shadow: 0 10px 6px -6px #755;    
 }
 
@@ -130,7 +131,8 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: -8px;
     margin-left: -14px;
     margin-right: -14px;
-    padding-bottom: 6px;
+    padding-bottom: 4px;
+    padding-top: 2px;
 }
 
 .row {
@@ -219,7 +221,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .task-list {
-    max-height: 59vh;
+    max-height: 65vh;
     overflow-y: auto;
     overflow-x: hidden;
     padding-right: 7px;
@@ -264,6 +266,22 @@ nav-tabs {
 .wl-textwrp {
     word-wrap: break-word;
     word-break: break-all;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        width: 90%;
+    }
+}
+
+@media (min-width: 1025px) {
+    html {
+        zoom: 110%;
+    }
+
+    .container {
+        width: 1000px;
+    }
 }
 
 /* Keyframes */

@@ -15,6 +15,7 @@ class TaskPage extends React.Component {
                         <h1>{this.props.name}</h1>
                     </div>
                 </div>
+                <br/>
                 <TaskForm forName={this.props.name} />
                 <br />
                 <TaskList items={this.props.items} name={this.props.name} />
