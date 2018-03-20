@@ -1,3 +1,6 @@
+if(require('electron-squirrel-startup')) 
+    return;
+
 const electron = require('electron')
 
 const app = electron.app
@@ -16,25 +19,25 @@ let worklogdb = new Datastore({
 })
 
 ipcMain.on('find-worklogs-request', (event) => {
-    let query = {_id: 'id1'};
+    let query = { _id: 'id1' };
     worklogdb.find(query, (err, docs) => {
-        if(err)
-            event.returnValue = {retCode: 0}
+        if (err)
+            event.returnValue = { retCode: 0 }
         else
             event.returnValue = docs
     })
 })
 
 ipcMain.on('save-worklogs-request', (event, worklogIns) => {
-    let query = {_id: 'id1'};
-    worklogdb.update(query, { $set: {worklog: worklogIns}}, (err, numAffected) => {
-        if(err)
-            event.returnValue = {retCode: 0}
-        else if(numAffected == 0)
-            event.returnValue = {retCode: 1}
+    let query = { _id: 'id1' };
+    worklogdb.update(query, { $set: { worklog: worklogIns } }, (err, numAffected) => {
+        if (err)
+            event.returnValue = { retCode: 0 }
+        else if (numAffected == 0)
+            event.returnValue = { retCode: 1 }
         else
-            event.returnValue = {retCode: 200}
-    }) 
+            event.returnValue = { retCode: 200 }
+    })
 })
 
 ipcMain.on('initiate-worklogs-request', (event) => {
@@ -43,16 +46,16 @@ ipcMain.on('initiate-worklogs-request', (event) => {
         worklog: []
     }
     worklogdb.insert(worklogIns, (err, docs) => {
-        if(err)
-            event.returnValue = {retCode: 0}
+        if (err)
+            event.returnValue = { retCode: 0 }
         else
-        event.returnValue = docs
+            event.returnValue = docs
     })
 })
 
 let mainWindow
 
-function createWindow () {
+function createWindow() {
     mainWindow = new BrowserWindow({
         width: 800,
         height: 600,
@@ -73,17 +76,17 @@ function createWindow () {
         mainWindow = null
     })
 
-    mainWindow.setMenu(null)
+    //mainWindow.setMenu(null)
 }
 
 app.on('ready', createWindow)
 
 app.on('window-all-closed', function () {
-    if(process.platform !== 'darwin')
+    if (process.platform !== 'darwin')
         app.quit()
 })
 
 app.on('activate', function () {
-    if(mainWindow == null)
+    if (mainWindow == null)
         createWindow()
 })
