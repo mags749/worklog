@@ -26,7 +26,7 @@ module.exports = {
                 loader: 'style-loader!css-loader?root=.'
             },
             {                                       // Module loaders for FONT files
-                test: /\.(eot|svg|ttf|woff|woff2)$/,
+                test: /\.(eot|svg|ttf|woff|woff2|otf)$/,
                 loader: 'file-loader?name=public/fonts/[name].[ext]'
             },
             {
