@@ -84,7 +84,7 @@ class WorkLog extends React.Component {
                             <div className="col-sm-1 center-lbl">
                                 {backButton}
                             </div>
-                            <div className="col-sm-10 center-lbl">
+                            <div className="col-sm-10 center-lbl title">
                                 <h1 className="modal-name">Create a WorkLog</h1>
                             </div>
                         </div>

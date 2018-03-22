@@ -11,7 +11,7 @@ class TaskPage extends React.Component {
         return (
             <div>
                 <div className="row">
-                    <div className="col-sm-12" style={{ textAlign: 'center' }}>
+                    <div className="col-sm-12 title">
                         <h1>{this.props.name}</h1>
                     </div>
                 </div>

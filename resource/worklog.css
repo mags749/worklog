@@ -148,6 +148,7 @@ h6 {
     margin-right: -14px;
     padding-bottom: 4px;
     padding-top: 2px;
+    font-size: smaller;
 }
 
 .row {
@@ -163,6 +164,11 @@ h6 {
 .vr-center {
     flex-direction: inherit !important;
     align-items: center;
+}
+
+.title {
+    text-align: center;
+    font-weight: bolder;
 }
 
 .nav-tabs>li>a {
@@ -243,7 +249,7 @@ h6 {
     margin-right: -15px;
 }
 
-.list-name {
+.list-name {    
     font-size: medium;
     padding-bottom: 7px;
     padding-left: 7px;
